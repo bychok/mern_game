@@ -1,4 +1,4 @@
-![Abstract Search](public/abstract_search.webp)
+![Abstract Search](./frontend/public/abstract_search.webp)
 
 # Super Search
 
