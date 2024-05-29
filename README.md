@@ -77,6 +77,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Acknowledgements
 
 - [Chais Robinson](https://chaisrobinson.github.io/) for providing the framework and the inspiration.
+- [Frankslaboratory] (https://www.youtube.com/watch?v=U34l-Xz5ynU) for the guidance and inspiration of the game.
 - [Unsplash](https://unsplash.com/) for providing high-quality images.
 - [React](https://reactjs.org/) for the powerful UI library.
 - [React Scroll Parallax](https://react-scroll-parallax.damnthat.tv/) for the parallax scrolling effects.
