@@ -1,66 +1,219 @@
-.App {
+html, body, .container-body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.introduction {
+  text-align: center;
+  padding: 2rem;
+  color: #e0e0e0;
+}
+
+.introduction p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.full-height {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.headline-content {
+  position: absolute;
+  top: 70%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-text {
+  font-size: 6rem;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App {
+  text-align: center;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Navbar.css */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.navbar-brand a {
+  color: #fff;
+  font-size: 2.5rem;
+  text-decoration: none;
+}
+
+.navbar-toggle {
+  display: none;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-left: 1.7rem;
+  margin-top: 1rem;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.nav-link:hover {
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-collapse {
+    background-color: #333;
+    flex-direction: column;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+  }
+
+  .navbar-collapse.show {
+    height: auto;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .nav-item {
+    margin-left: 0;
+    margin-bottom: 0.5rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Homepage.css */
+.container-body {
+  background-color: #1a1a1a;
+}
+
+.bg-container h1 {
+  color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 150px;
+  font-size: 70px;
+}
+
+/* Api.css */
+.api-search-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+  padding-top: 2rem;
+  height: 100vh;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.search-bar-wrapper {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.search-input {
+  width: 300px;
+  padding: 10px;
+  font-size: 1.2rem;
+  border: 2px solid #444;
+  background-color: #333;
+  color: #e0e0e0;
+  border-radius: 5px 0 0 5px;
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #444;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  color: #e0e0e0;
+  cursor: pointer;
 }
 
-.a_note{
-  border:solid black;
-  border-width:.2px;
-  margin:1em;
+.search-button:hover {
+  background-color: #555;
 }
-.a_note:hover{
-  border:solid black;
-  border-width:.2px;
-  margin:1em;
-  background-color: lightblue;
-  color:peru;
+
+.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+  width: 80%;
+  margin-top: 20px;
 }
-.formAdmin{
-  border:solid purple;
-  border-radius:12px;
-  margin:1em;
-  display:flex;
-  justify-content: space-around;
-  height:32vh;
+
+.results img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
 }
-form{
-  /* border:solid green; */
-  text-align:center;
-  height:80px;
-  padding:1em;
-  display:flex;
+
+.results img:hover {
+  transform: scale(1.05);
+}
+
+.full-height {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
